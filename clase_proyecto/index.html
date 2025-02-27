@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es"> 
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Clima API</title> 
+    
+    <!-- Enlace a Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+
+    <!-- Enlace a  estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="body-bg flex items-center justify-center min-h-screen">  <!-- Fondo de la página y centrado  -->
+
+    <div class="w-full max-w-lg text-center">  
+        <h1 class="titulo">CONEXIÓN API CLIMA</h1> 
+        <p class="subtitulo">¡Aviso Importante! Agregar la Ciudad</p> 
+
+        <div class="bg-white p-8 rounded-lg shadow-lg mt-6"> 
+            <form id="formulario" class="flex flex-col gap-4">  
+
+                <!-- Campo para ingresar la ciudad -->
+                <input 
+                    type="text" 
+                    name="ciudad"
+                    id="ciudad"
+                    placeholder="Ciudad"
+                    class="w-full p-3 rounded-md border border-gray-300 text-gray-700 focus:outline-none"
+                />
+
+                <!-- Menú desplegable para seleccionar el país -->
+                <select 
+                    id="pais" 
+                    class="w-full p-3 rounded-md border border-gray-300 bg-gray-100 text-gray-700 focus:outline-none"
+                >
+                    <option disabled selected value=" ">--Seleccione un país--</option> 
+                    <option value="AF">Afganistán</option>
+                    <option value="AL">Albania</option>
+                    <option value="DE">Alemania</option>
+                    <option value="SA">Arabia Saudita</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="BE">Bélgica</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BR">Brasil</option>
+                    <option value="CA">Canadá</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CO">Colombia</option>
+                    <option value="KR">Corea del Sur</option>
+                    <option value="ES">España</option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="FR">Francia</option>
+                    <option value="IT">Italia</option>
+                    <option value="JP">Japón</option>
+                    <option value="MX">México</option>
+                    <option value="RU">Rusia</option>
+                    <option value="GB">Reino Unido</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="VN">Vietnam</option>
+                </select>
+
+                
+                <button type="submit" class="btn">
+                    BUSCAR TEMPERATURA
+                </button>
+            </form>
+        </div>
+        <div id="resultado" class="mt-6 text-white"></div>
+    </div>
+    <script src="js/app.js"></script> 
+</body>
+</html>
